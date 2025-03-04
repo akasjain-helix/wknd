@@ -597,13 +597,6 @@ export function decorateButtons(element) {
         }
       }
     }
-    a.addEventListener('click', (event) => {
-      event.preventDefault();
-      fetch("http://localhost:4506/system/console/bundles.json")
-          .then(res => console.log(res));
-      console.log(`Anchor clicked: ${a.href}`);
-      // Add your custom logic here
-    });
   });
 }
 
