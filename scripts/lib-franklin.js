@@ -582,6 +582,7 @@ export function decorateButtons(element) {
       if (!a.querySelector('img')) {
         if (up.childNodes.length === 1 && (up.tagName === 'P' || up.tagName === 'DIV')) {
           a.className = 'button primary'; // default
+
           up.classList.add('button-container');
         }
         if (up.childNodes.length === 1 && up.tagName === 'STRONG'
@@ -596,6 +597,13 @@ export function decorateButtons(element) {
         }
       }
     }
+    a.addEventListener('click', (event) => {
+      event.preventDefault();
+      fetch("http://localhost:4506/system/console/bundles.json")
+          .then(res => console.log(res));
+      console.log(`Anchor clicked: ${a.href}`);
+      // Add your custom logic here
+    });
   });
 }
 
