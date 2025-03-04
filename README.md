@@ -8,8 +8,8 @@ Codebase for the fictional WKND site, showcasing the capabilities of Adobe's Edg
 
 ## Environments
 
-- Preview: https://main--wknd--akasjain-helix.hlx.page/
-- Live: https://main--wknd--akasjain-helix.hlx.live/
+- Preview: https://main--wknd--akasjain-helix.aem.page/
+- Live: https://main--wknd--akasjain-helix.aem.live/
 
 ## Installation
 
