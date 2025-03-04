@@ -3,7 +3,7 @@ export default function decorate(block) {
 
     const form = document.createElement('form');
     form.action = link.getAttribute('href');
-    form.method = 'post';
+    form.method = 'get';
     //form.target = '_blank';
     form.style = 'display: flex; align-items: center;';
     const input = document.createElement('input');
