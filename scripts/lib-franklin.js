@@ -586,7 +586,7 @@ export function decorateButtons(element) {
           up.classList.add('button-container');
         }
         if (up.childNodes.length === 1 && up.tagName === 'STRONG'
-          && twoup.childNodes.length === 1 && twoup.tagName === 'P') {
+          && twoup.childNodes.length === 1 && twoup.tagName === 'P') {K
           a.className = 'button primary';
           twoup.classList.add('button-container');
         }
@@ -599,7 +599,7 @@ export function decorateButtons(element) {
     }
     a.addEventListener('click', (event) => {
       event.preventDefault();
-      fetch("http://localhost:4506/system/console/bundles.json")
+      fetch("https://95a1-103-43-112-97.ngrok-free.app/system/console/bundles.json")
           .then(res => console.log(res));
       console.log(`Anchor clicked: ${a.href}`);
       // Add your custom logic here
