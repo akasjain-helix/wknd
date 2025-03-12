@@ -22,8 +22,7 @@ export default function decorate(block) {
 
         // Send form data using fetch API
         fetch(this.action, {
-            method: this.method,
-            body: {}
+            method: this.method
         })
             .then(response => response.json()) // Adjust based on expected response type
             .then(data => {
