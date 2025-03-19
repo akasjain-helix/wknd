@@ -77,3 +77,29 @@ main .mainmenu .section.rightsection.googleform .block.embed iframe {
     margin: 20px 70px 20px 50px;
     max-width: unset;
 }
+
+.fake-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 50px;
+  cursor: pointer;
+  border: 2px solid blue;
+  text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+iframe {
+  position: absolute;
+  width: 500px;  /* Make iframe wider to ensure button is visible */
+  height: 200px; /* Make iframe taller to include the button */
+  opacity: 0.01;
+  z-index: 2;
+  border: none;
+}

@@ -13,23 +13,4 @@ export default function decorate(block) {
     form.append(input);
     block.textContent = '';
     block.append(form);
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent redirection
-
-        // Fetch form data
-        //const formData = new FormData(this);
-
-        // Send form data using fetch API
-        fetch(this.action, {
-            method: this.method
-        })
-            .then(response => response.json()) // Adjust based on expected response type
-            .then(data => {
-                console.log("Form submitted successfully:", data);
-            })
-            .catch(error => {
-                console.error("Error submitting form:", error);
-            });
-    });
 };
