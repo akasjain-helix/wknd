@@ -9,7 +9,7 @@ export default function decorate(block) {
     });
 
     form.method = httpMethod;
-    form.target = 'hidden-iframe';
+    //form.target = 'hidden-iframe';
     form.style = 'display: flex; align-items: center;';
     const label = document.createElement('label');
     label.value = "Click me";
