@@ -30,7 +30,7 @@ export default function decorate(block) {
             return response.json();
         })
         .then(res => {
-            alert(res);
+            alert(res.en.columns.toString());
         })
         .catch(error => {
             console.error("Error submitting form:", error);
