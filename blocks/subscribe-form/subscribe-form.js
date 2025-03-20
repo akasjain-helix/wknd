@@ -15,7 +15,7 @@ export default function decorate(block) {
     // }
 
     form.method = httpMethod;
-    form.target = 'hidden-iframe';
+    // form.target = 'hidden-iframe';
     // form.target = '_self';
     form.style = 'display: flex; align-items: center;';
     // form.onsubmit = function(event) {
