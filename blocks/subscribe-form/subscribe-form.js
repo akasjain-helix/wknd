@@ -15,7 +15,7 @@ export default function decorate(block) {
     // }
 
     form.method = httpMethod;
-    // form.target = 'hidden-iframe';
+    form.target = 'hidden-iframe';
     // form.target = '_self';
     form.style = 'display: flex; align-items: center;';
     // form.onsubmit = function(event) {
@@ -38,7 +38,7 @@ export default function decorate(block) {
     const authorizableIdField = document.createElement('input');
     authorizableIdField.type = 'hidden';
     authorizableIdField.name = 'authorizableId';
-    authorizableIdField.value = 'aaaaa';
+    authorizableIdField.value = 'aaaaakkkk';
     form.appendChild(authorizableIdField);
     
     const passwordField = document.createElement('input');
