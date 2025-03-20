@@ -25,6 +25,7 @@ export default function decorate(block) {
 
     const iframe = document.createElement('iframe');
     iframe.name = 'hidden-iframe';
+    iframe.style = 'display: none';
     block.append(iframe);
     block.append(form);
 };
