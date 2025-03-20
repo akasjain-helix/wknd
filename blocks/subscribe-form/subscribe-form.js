@@ -3,7 +3,7 @@ export default function decorate(block) {
     const classList = block.classList;
     const form = document.createElement('form');
     // form.action = link.getAttribute('href');
-    form.action = 'https://localhost:4502/libs/granite/security/post/authorizables'
+    form.action = 'https://localhost:8443/libs/granite/security/post/authorizables'
     let httpMethod = 'post';
 
     block.classList.values().filter((className) => className.startsWith('method')).forEach((className) => {
