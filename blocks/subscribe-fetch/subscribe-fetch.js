@@ -16,7 +16,6 @@ export default function decorate(block) {
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-        alert(document.cookie);
         fetch(this.action, {
                 method: this.method,
                 //credentials: 'include',
@@ -28,8 +27,10 @@ export default function decorate(block) {
             }
         )
         .then(response => {
-            alert(response.json());
-            console.log("Form submitted successfully:");
+            return response.json();
+        })
+        .then(res => {
+            alert(res);
         })
         .catch(error => {
             console.error("Error submitting form:", error);
