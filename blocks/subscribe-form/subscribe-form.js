@@ -37,7 +37,7 @@ export default function decorate(block) {
     const authorizableIdField = document.createElement('input');
     authorizableIdField.type = 'hidden';
     authorizableIdField.name = 'authorizableId';
-    authorizableIdField.value = 'aaaaakkkk';
+    authorizableIdField.value = 'aaaaakkkk' + Math.random();
     form.appendChild(authorizableIdField);
     
     const passwordField = document.createElement('input');
