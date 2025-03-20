@@ -3,7 +3,12 @@ export default function decorate(block) {
     const classList = block.classList;
     const form = document.createElement('form');
     form.action = link.getAttribute('href');
-    form.method = classList.contains('post') ? 'post' : 'get';
+    let httpMethod = 'get';
+    block.classList.values().filter((className) => className.startsWith('method')).forEach((className) => {
+        [, httpMethod] = className.split('-');
+    });
+
+    form.method = httpMethod;
     //form.target = '_blank';
     form.style = 'display: flex; align-items: center;';
     const input = document.createElement('input');
