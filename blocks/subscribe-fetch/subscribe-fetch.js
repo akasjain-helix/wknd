@@ -27,13 +27,11 @@ export default function decorate(block) {
                 }
             }
         )
-        //.then(response => response.json()) // Adjust based on expected response type
-        .then(data => {
-            alert(document.cookie);
-            console.log("Form submitted successfully:", data);
+        .then(response => {
+            alert(response.json());
+            console.log("Form submitted successfully:");
         })
         .catch(error => {
-            alert(document.cookie);
             console.error("Error submitting form:", error);
         });
     });
