@@ -98,8 +98,14 @@ main .mainmenu .section.rightsection.googleform .block.embed iframe {
 iframe {
   position: absolute;
   width: 200px;  /* Make iframe wider to ensure button is visible */
-  height: 200px; /* Make iframe taller to include the button */
+  height: 50px; /* Make iframe taller to include the button */
   opacity: 0;
   z-index: 2;
   border: none;
+}
+
+.fake-button {
+  cursor: pointer;
+  pointer-events: none;
+  height: 50px;
 }
