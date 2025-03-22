@@ -11,11 +11,9 @@ export default function decorate(block) {
         event.preventDefault();
         fetch(link, {
                 method: classList.contains('post') ? 'post' : 'get',
-                //credentials: 'include',
-                //mode: "no-cors",
                 Headers: {
                     'Content-Type': 'application/json',
-                    'Cookie': document.cookie
+                    'ngrok-skip-browser-warning': true,
                 }
             }
         )
@@ -23,7 +21,7 @@ export default function decorate(block) {
             return response.json();
         })
         .then(res => {
-            alert(res.en.columns.toString());
+            console.log(res.en.columns.toString());
         })
         .catch(error => {
             console.error("Error submitting form:", error);
